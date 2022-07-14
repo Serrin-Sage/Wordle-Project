@@ -10,7 +10,28 @@ const useWordle = (solution) => {
 
     // formats a guess from the user into an array of letter objects
     const formatGuess = () => {
-        console.log('formatting the guess - ', currentGuess)
+       let solutionArray = [...solution]
+       let formattedGuess = [...currentGuess].map((letter) => {
+         return { key: letter, color: 'grey'}
+       })
+
+       // find any green letters (correct placement)
+       formattedGuess.forEach((letter, i) => {
+         if (solutionArray[i] === letter.key) {
+            formattedGuess[i].color = 'green'
+            solutionArray[i] = null
+         }
+       })
+
+       // find any yellow colors (incorrect placement)
+       formattedGuess.forEach((letter, i) => {
+         if (solutionArray.includes(letter.key) && letter.color !== 'green') {
+            formattedGuess[i].color = 'yellow'
+            solutionArray[solutionArray.indexOf(letter.key)] = null
+         }
+       })
+
+       return formattedGuess
     }
 
     // adds a new guess to the guesses state
@@ -43,7 +64,8 @@ const useWordle = (solution) => {
                 return
             }
 
-            formatGuess()
+            const formatted = formatGuess()
+            console.log(formatted)
         }
 
         // remove last character from string if Backspace pressed
