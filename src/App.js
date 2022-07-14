@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Wordle from "./components/Wordle";
 
 function App() {
   const [solution, setSolution] = useState(null)
@@ -18,9 +19,11 @@ function App() {
         <h1 className="title">Wordle Project</h1>
       </div>
       {/* {solution && <div>Solution is: {solution}</div>} shows the solution word*/}
-     
+      {solution && <Wordle solution={solution} />}
     </div>
   );
 }
 
 export default App;
+
+//type `json-server ./data/db.json --port 3001` in terminal to start data server
