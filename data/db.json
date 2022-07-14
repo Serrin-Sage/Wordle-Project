@@ -1,0 +1,25 @@
+ {
+    "solutions": [
+        {"id": 1, "word": "spade"},
+        {"id": 2, "word": "jewel"},
+        {"id": 3, "word": "pools"},
+        {"id": 4, "word": "spool"},
+        {"id": 5, "word": "drive"},
+        {"id": 6, "word": "relax"},
+        {"id": 7, "word": "codes"},
+        {"id": 8, "word": "train"},
+        {"id": 9, "word": "phone"},
+        {"id": 10, "word": "sword"},
+        {"id": 11, "word": "hello"},
+        {"id": 12, "word": "nails"},
+        {"id": 13, "word": "liken"},
+        {"id": 14, "word": "plant"},
+        {"id": 15, "word": "clone"},
+        {"id": 16, "word": "apple"},
+        {"id": 17, "word": "stone"},
+        {"id": 18, "word": "metal"},
+        {"id": 19, "word": "slime"},
+        {"id": 20, "word": "tanks"}
+        
+    ]
+ }
