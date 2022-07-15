@@ -13,13 +13,22 @@ function App() {
     })
   }, [setSolution]) 
 
+  function refreshPage() {
+    window.location.reload(false);
+  }
+
   return (
     <div className="App">
       <div className="header">
         <h1 className="title">Wordle Project</h1>
+        <div>
+          <button onClick={refreshPage}>Click to Reload</button>
+        </div>
       </div>
       {/* {solution && <div>Solution is: {solution}</div>} shows the solution word*/}
       {solution && <Wordle solution={solution} />}
+
+      
     </div>
   );
 }
