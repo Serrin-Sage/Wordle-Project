@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import './stylesheets/grid-row-style.css';
 import './stylesheets/keypad-style.css';
+import './stylesheets/modal-style.css';
 import App from './App';
 
 
