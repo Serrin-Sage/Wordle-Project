@@ -21,8 +21,8 @@ function App() {
     <div className="App">
       <div className="header">
         <h1 className="title">Wordle Project</h1>
-        <div>
-          <button onClick={refreshPage}>Click to Reload</button>
+        <div className="reset-container">
+          <button onClick={refreshPage} className="reset-button">New Word</button>
         </div>
       </div>
       {/* {solution && <div>Solution is: {solution}</div>} shows the solution word*/}

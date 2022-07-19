@@ -97,12 +97,16 @@ const useWordle = (solution) => {
             }
 
             if (history.includes(currentGuess)) {
-                console.log('you already tried that word')
-                return
+                alert('you already tried that word')
+                return (
+                    <div>
+                        
+                    </div>
+                )
             }
 
             if (currentGuess.length !== 5) {
-                console.log("word must be 5 letters")
+                alert("word must be 5 letters")
                 return
             }
 

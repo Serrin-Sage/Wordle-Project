@@ -29,6 +29,31 @@ code {
 }
 
 .title {
-  font-family: 'Courier New', Courier, monospace;
+  font-family:'Times New Roman', Times, serif;
   font-size: 35px;
+  cursor: default;
+}
+
+.reset-container {
+  margin: 1rem;
+}
+
+.reset-button {
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  background: rgb(157, 228, 143);
+  width: 50px;
+  border: solid 1px rgb(109, 155, 100);
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.reset-button:hover {
+  background: rgb(131, 243, 108);
+  border: solid 1px rgb(90, 151, 78);
+}
+
+.reset-button:active {
+  transform: translateY(2px);
 }

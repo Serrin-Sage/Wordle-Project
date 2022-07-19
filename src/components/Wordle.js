@@ -23,6 +23,7 @@ export default function Wordle({ solution }) {
     return () => window.removeEventListener('keyup', handleKeyup)
   }, [handleKeyup, isCorrect, turn])
   
+  
   console.log({solution})
   return (
     
