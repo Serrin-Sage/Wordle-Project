@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { ToastContainer, toast } from 'react-toastify'
 
 const useWordle = (solution) => {
 
@@ -9,6 +10,7 @@ const useWordle = (solution) => {
     const [isCorrect, setIsCorrect] = useState(false)
     const [usedKeys, setUsedKeys] = useState({})
 
+    const notify = () => toast("EXAMPLE")
     // formats a guess from the user into an array of letter objects
     const formatGuess = () => {
        let solutionArray = [...solution]
@@ -97,10 +99,11 @@ const useWordle = (solution) => {
             }
 
             if (history.includes(currentGuess)) {
-                alert('you already tried that word')
+                alert({notify})
                 return (
                     <div>
-                        
+                        {notify}
+                        <ToastContainer />
                     </div>
                 )
             }

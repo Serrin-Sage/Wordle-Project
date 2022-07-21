@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Wordle from "./components/Wordle";
+import Header from "./components/Header";
 
 function App() {
   const [solution, setSolution] = useState(null)
@@ -13,18 +14,11 @@ function App() {
     })
   }, [setSolution]) 
 
-  function refreshPage() {
-    window.location.reload(false);
-  }
+  
 
   return (
     <div className="App">
-      <div className="header">
-        <h1 className="title">Wordle Project</h1>
-        <div className="reset-container">
-          <button onClick={refreshPage} className="reset-button">New Word</button>
-        </div>
-      </div>
+      <Header />
       {/* {solution && <div>Solution is: {solution}</div>} shows the solution word*/}
       {solution && <Wordle solution={solution} />}
 
